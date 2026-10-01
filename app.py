@@ -31,7 +31,8 @@ st.write(
     "and analyze investment classifications."
 )
 
-DATA_PATH = Path(__file__).parent / "cleaned_housing_data.csv"
+DATA_PATH = Path(__file__).parent / "cleaned_housing_data.parquet"
+df = pd.read_parquet(DATA_PATH)
 
 # --------------------------------------------------
 # 2. LOAD DATA AND TRAIN MODELS
@@ -39,7 +40,7 @@ DATA_PATH = Path(__file__).parent / "cleaned_housing_data.csv"
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv(DATA_PATH)
+    df = pd.read_parquet(DATA_PATH)
 
     required = [
         "City", "Property_Type", "BHK",
