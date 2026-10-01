@@ -15,6 +15,7 @@ from sklearn.metrics import (
     accuracy_score
 )
 
+Live app: https://bristi10-real-estate-advisor-app-xrard4.streamlit.app/
 # --------------------------------------------------
 # 1. PAGE SETTINGS
 # --------------------------------------------------
